@@ -1,10 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ModMetaData>
-	<name>Music Manager</name>
-	<author>Fluffy</author>
-	<supportedVersions>
-		<li>1.1</li>
-	</supportedVersions>
-	<description>manage your music. Like a boss.</description>
-	<url>https://steamcommunity.com/id/Fluffy/myworkshopfiles/?appid=294100</url>
+  <name>Music Manager</name>
+  <author>Fluffy</author>
+  <supportedVersions>
+    <li>1.1</li>
+  </supportedVersions>
+  <description>manage your music. Like a boss.
+
+&lt;size=24&gt;Important&lt;/size&gt;
+&lt;size=24&gt;Features&lt;/size&gt;
+&lt;size=24&gt;Known Issues&lt;/size&gt;
+&lt;size=24&gt;Version&lt;/size&gt;
+This is version 0.1.25, for RimWorld 1.1.2654.
+
+</description>
+  <url>https://ludeon.com/forums/index.php?topic=16120</url>
+  <packageId>fluffy.musicmanager</packageId>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
 </ModMetaData>

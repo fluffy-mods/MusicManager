@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
-using RimWorld;
 
 namespace MusicManager
 {
-	class Settings : ModSettings
+	public class Settings : ModSettings
 	{
 		public void DoWindowContents(Rect canvas)
 		{

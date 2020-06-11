@@ -1,12 +1,18 @@
 {
-  "name": "Music Manager",
-  "version": {
-    "major": 0,
-    "minor": 0,
-    "build": 0
-  },
-  "git_user": "fluffy-mods",
-  "git_repo": "MusicManager",
-  "visibility": 0,
-  "packageId": "fluffy.music manager"
+    "name": "Music Manager",
+    "version": {
+        "major": 0,
+        "minor": 1,
+        "build": 25
+    },
+    "git_user": "fluffy-mods",
+    "git_repo": "MusicManager",
+    "visibility": 0,
+    "packageId": "fluffy.musicmanager",
+    "changenote": "",
+    "changenotes": [],
+    "contributors": {},
+    "tags": [
+        "1.1"
+    ]
 }
