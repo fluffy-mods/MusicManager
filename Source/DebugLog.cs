@@ -14,7 +14,7 @@ namespace MusicManager
 
 		public static void Message(string msg )
 		{
-			Verse.Log.Message( $"MusicManager :: {msg}");
+			Verse.Log.Message( $"GameComp_MusicManager :: {msg}");
 		}
 	}
 }

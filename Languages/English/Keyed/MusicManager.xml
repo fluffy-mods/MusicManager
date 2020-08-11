@@ -1,3 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+    <Fluffy.MusicManager>Music Manager</Fluffy.MusicManager>
+
+    <Fluffy.MusicManager.LockWidgetPosition>Lock widget position</Fluffy.MusicManager.LockWidgetPosition>
+    <Fluffy.MusicManager.LockWidgetPosition.Tooltip>When locked, the player widget cannot be moved. Disable to drag the widget into a new location.</Fluffy.MusicManager.LockWidgetPosition.Tooltip>
+    <Fluffy.MusicManager.Columns.Name.Label>Name</Fluffy.MusicManager.Columns.Name.Label>
+    <Fluffy.MusicManager.Columns.Name.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by name.\n\n&lt;i&gt;Note: names may not always be sensible, as they are usually not visible.&lt;/i&gt;</Fluffy.MusicManager.Columns.Name.Tooltip>
+    <Fluffy.MusicManager.Columns.Length.Label>Length</Fluffy.MusicManager.Columns.Length.Label>
+    <Fluffy.MusicManager.Columns.Length.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by song length.</Fluffy.MusicManager.Columns.Length.Tooltip>
+    <Fluffy.MusicManager.Columns.TimeOfDay.Label>Time of Day</Fluffy.MusicManager.Columns.TimeOfDay.Label>
+    <Fluffy.MusicManager.Columns.TimeOfDay.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by the time of day this song is allowed to play.
+&lt;b&gt;Alt-click&lt;/b&gt; to filter visible songs by the time of day they are allowed to play.
+&lt;b&gt;Shift-click&lt;/b&gt; to mass assign allowed time of day for visible songs.</Fluffy.MusicManager.Columns.TimeOfDay.Tooltip>
+    <Fluffy.MusicManager.Columns.Tense.Label>War &amp; Peace</Fluffy.MusicManager.Columns.Tense.Label>
+    <Fluffy.MusicManager.Columns.Tense.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by songs for war and peace.
+&lt;b&gt;Alt-click&lt;/b&gt; to filter visible songs by songs for war and peace.
+&lt;b&gt;Shift-click&lt;/b&gt; to mass assign war and peace for visible songs.</Fluffy.MusicManager.Columns.Tense.Tooltip>
+    <Fluffy.MusicManager.Columns.Seasons.Label>Seasons</Fluffy.MusicManager.Columns.Seasons.Label>
+    <Fluffy.MusicManager.Columns.Seasons.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by the seasons this song is allowed to play.
+&lt;b&gt;Alt-click&lt;/b&gt; to filter visible songs by the seasons they are allowed to play.
+&lt;b&gt;Shift-click&lt;/b&gt; to mass assign allowed seasons for visible songs.</Fluffy.MusicManager.Columns.Seasons.Tooltip>
+    <Fluffy.MusicManager.Filtered>This column has an active filter.</Fluffy.MusicManager.Filtered>
+    <Fluffy.MusicManager.Sorted>The table is sorted by this column.</Fluffy.MusicManager.Sorted>
+
+    <Fluffy.MusicManager.AllowedTimeOfDay>Allowed time of day: {0}</Fluffy.MusicManager.AllowedTimeOfDay>
+    <Fluffy.MusicManager.TimeOfDay.Night>night</Fluffy.MusicManager.TimeOfDay.Night>
+    <Fluffy.MusicManager.TimeOfDay.Day>day</Fluffy.MusicManager.TimeOfDay.Day>
+    <Fluffy.MusicManager.TimeOfDay.Any>any</Fluffy.MusicManager.TimeOfDay.Any>
+
+    <Fluffy.MusicManager.AllowedSeasons>Allowed seasons: {0}</Fluffy.MusicManager.AllowedSeasons>
+    <Fluffy.MusicManager.Season.Undefined>undefined</Fluffy.MusicManager.Season.Undefined>
+    <Fluffy.MusicManager.Season.Winter>winter</Fluffy.MusicManager.Season.Winter>
+    <Fluffy.MusicManager.Season.Fall>fall</Fluffy.MusicManager.Season.Fall>
+    <Fluffy.MusicManager.Season.Summer>summer</Fluffy.MusicManager.Season.Summer>
+    <Fluffy.MusicManager.Season.Spring>spring</Fluffy.MusicManager.Season.Spring>
+    <Fluffy.MusicManager.Season.PermanentWinter>permanent winter</Fluffy.MusicManager.Season.PermanentWinter>
+    <Fluffy.MusicManager.Season.PermanentSummer>permanent summer</Fluffy.MusicManager.Season.PermanentSummer>
+    
+    <Fluffy.MusicManager.AllowedTense>Allowed during: {0}</Fluffy.MusicManager.AllowedTense>
+    <Fluffy.MusicManager.War>war</Fluffy.MusicManager.War>
+    <Fluffy.MusicManager.Peace>peace</Fluffy.MusicManager.Peace>
 </LanguageData>

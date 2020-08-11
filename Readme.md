@@ -61,4 +61,4 @@ Become a supporter and show your appreciation by buying me a coffee (or contribu
   
   
 ![Version](https://banners.karel-kroeze.nl/title/Version.png)
-This is version 0.1.25, for RimWorld 1.1.2654.
+This is version 0.1.132, for RimWorld 1.1.2654.
