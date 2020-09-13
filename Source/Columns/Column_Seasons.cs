@@ -45,6 +45,8 @@ namespace MusicManager
 
         public override void DrawCell( Rect canvas, SongDef song )
         {
+
+            base.DrawCell( canvas, song );
             var cell = canvas.RightPartPixels( canvas.width / 4 );
             TooltipHandler.TipRegion( cell, () => Tooltip( Season.Winter, song ), song.GetHashCode() ^ cell.GetHashCode() );
             DrawSongSeason( ref cell, ref song.allowedSeasons, Season.Winter, Resources.WinterOn, Resources.WinterOff );

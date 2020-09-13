@@ -1,43 +1,20 @@
-[![RimWorld 1.1](https://img.shields.io/badge/RimWorld-1.1-brightgreen.svg)](http://rimworldgame.com/)
+[![RimWorld 1.2](https://img.shields.io/badge/RimWorld-1.2-brightgreen.svg)](http://rimworldgame.com/)
 
 manage your music. Like a boss.
 
-
-  
-  
-![Important](https://banners.karel-kroeze.nl/title/Important.png)
-
-
-  
-  
-![Features](https://banners.karel-kroeze.nl/title/Features.png)
+![Important](https://banners.karel-kroeze.nl/title/Important.png)  
+![Features](https://banners.karel-kroeze.nl/title/Features.png)  
+![Known Issues](https://banners.karel-kroeze.nl/title/Known%20Issues.png)  
 
 
-  
-  
-![Known Issues](https://banners.karel-kroeze.nl/title/Known%20Issues.png)
-
-
-
-  
-  
-![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)
-
+![Think you found a bug?](https://banners.karel-kroeze.nl/title/Think%20you%20found%20a%20bug%3F.png)  
 Please read [this guide](http://steamcommunity.com/sharedfiles/filedetails/?id=725234314) before creating a bug report,
 and then create a bug report [here](https://github.com/fluffy-mods/MusicManager/issues)
 
-
-  
-  
-![Older versions](https://banners.karel-kroeze.nl/title/Older%20versions.png)
-
+![Older versions](https://banners.karel-kroeze.nl/title/Older%20versions.png)  
 All current and past versions of this mod can be downloaded from [GitHub](https://github.com/fluffy-mods/MusicManager/releases).
 
-
-  
-  
-![License](https://banners.karel-kroeze.nl/title/License.png)
-
+![License](https://banners.karel-kroeze.nl/title/License.png)  
 All original code in this mod is licensed under the [MIT license](https://opensource.org/licenses/MIT). Do what you want, but give me credit.
 All original content (e.g. text, imagery, sounds) in this mod is licensed under the [CC-BY-SA 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/).
 
@@ -45,11 +22,7 @@ Parts of the code in this mod, and some content may be licensed by their origina
 
 [![Supporters](https://banners.karel-kroeze.nl/donations.png)](https://ko-fi.com/fluffymods)
 
-
-  
-  
-![Are you enjoying my mods?](https://banners.karel-kroeze.nl/title/Are%20you%20enjoying%20my%20mods%3F.png)
-
+![Are you enjoying my mods?](https://banners.karel-kroeze.nl/title/Are%20you%20enjoying%20my%20mods%3F.png)  
 Become a supporter and show your appreciation by buying me a coffee (or contribute towards a nice single malt).
 
 [![Buy Me a Coffee](http://i.imgur.com/EjWiUwx.gif)](https://ko-fi.com/fluffymods)
@@ -57,8 +30,5 @@ Become a supporter and show your appreciation by buying me a coffee (or contribu
 [![I Have a Black Dog](https://i.ibb.co/ss59Rwy/New-Project-2.png)](https://www.youtube.com/watch?v=XiCrniLQGYc)
 
 
-
-  
-  
-![Version](https://banners.karel-kroeze.nl/title/Version.png)
-This is version 0.1.132, for RimWorld 1.1.2654.
+![Version](https://banners.karel-kroeze.nl/title/Version.png)  
+This is version 0.1.188, for RimWorld 1.2.2753.

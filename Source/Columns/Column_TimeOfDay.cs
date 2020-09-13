@@ -37,6 +37,7 @@ namespace MusicManager
 
         public override void DrawCell( Rect canvas, SongDef song )
         {
+            base.DrawCell( canvas, song );
             DrawTimeOfDayIcon( new Rect( Vector2.zero, IconSize ).CenteredIn( canvas ), song.allowedTimeOfDay );
             TooltipHandler.TipRegion(canvas, () => Tooltip( song ), song.GetHashCode() ^ canvas.GetHashCode() );
             if ( Utilities.DrawButton( canvas ) )

@@ -4,7 +4,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using RimWorld.Planet;
 using Verse;
 
 namespace MusicManager
@@ -26,6 +25,10 @@ namespace MusicManager
         public static string SeasonsColumn_Tip         = Translate( "Columns.Seasons.Tooltip" );
         public static string Filtered                  = Translate( "Filtered" );
         public static string Sorted                    = Translate( "Sorted" );
+        public static string SongIntervalPeace         = Translate( "SongIntervalPeace" );
+        public static string SongIntervalWar           = Translate( "SongIntervalWar" );
+        public static string SongIntervalPeace_Tip     = Translate( "SongIntervalPeace.Tip" );
+        public static string SongIntervalWar_Tip       = Translate( "SongIntervalWar.Tip" );
 
         private static string Key( string key )
         {
@@ -63,7 +66,8 @@ namespace MusicManager
             return Translate( "AllowedTense", tense ? War : Peace);
         }
 
-        public static string War = Translate( "War" );
+        public static string War   = Translate( "War" );
         public static string Peace = Translate( "Peace" );
+        public static string ResetCustomMetaData = Translate( "ResetCustomMetaData" );
     }
 }

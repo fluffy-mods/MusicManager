@@ -35,6 +35,8 @@ namespace MusicManager
 
         public override void DrawCell( Rect canvas, SongDef song )
         {
+
+            base.DrawCell( canvas, song );
             TooltipHandler.TipRegion( canvas, () => Tooltip( song ), song.GetHashCode() ^ canvas.GetHashCode() );
             if ( Utilities.DrawButton( canvas, song.tense ? Resources.Explosion : Resources.Dove, IconSize.x ) )
             {

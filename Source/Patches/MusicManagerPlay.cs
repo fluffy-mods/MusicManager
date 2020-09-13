@@ -14,6 +14,11 @@ namespace MusicManager.Patches
             // do not allow starting the next song if we're currently paused
             return !MusicManager.isPaused;
         }
+
+        public static void Postfix()
+        {
+            MusicManager.AudioSource.time = 0;
+        }
     }
 
     [HarmonyPatch( typeof( MusicManagerPlay ), nameof( MusicManagerPlay.ForceStartSong ) )]

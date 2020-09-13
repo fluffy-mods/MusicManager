@@ -20,6 +20,7 @@ namespace MusicManager
 
         public override void DrawCell( Rect canvas, SongDef song )
         {
+            base.DrawCell( canvas, song );
             Text.Anchor = TextAnchor.MiddleRight;
             Widgets.Label( canvas, song.clip.length.ToStringTime().Italic() );
             Text.Anchor = TextAnchor.UpperLeft;
@@ -31,6 +32,10 @@ namespace MusicManager
                 Window_MusicManager.SortBy = this;
             DrawOverlay( canvas );
             TooltipHandler.TipRegion( canvas, () => HeaderTooltip, GetHashCode() );
+        }
+        public override Color Color( SongDef song )
+        {
+            return song == MusicManager.CurrentSong ? GenUI.MouseoverColor : UnityEngine.Color.white;
         }
 
         public override bool Filter( SongDef song )

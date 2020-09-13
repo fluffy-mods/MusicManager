@@ -35,8 +35,14 @@ namespace MusicManager
             return string.Compare( a.Name(), b.Name(), StringComparison.Ordinal );
         }
 
+        public override Color Color( SongDef song )
+        {
+            return song == MusicManager.CurrentSong ? GenUI.MouseoverColor : UnityEngine.Color.white;
+        }
+
         public override void DrawCell( Rect canvas, SongDef song )
         {
+            base.DrawCell( canvas, song );
             Text.Anchor = TextAnchor.MiddleLeft;
             Widgets.Label( canvas, song.Name() );
             Text.Anchor = TextAnchor.UpperLeft;

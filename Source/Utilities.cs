@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using static MusicManager.Resources;
 
 namespace MusicManager
 {
@@ -92,11 +93,38 @@ namespace MusicManager
             if ( DrawButton( canvas, icon, iconSize ) ) action.Invoke();
         }
 
+
+        public static void DrawPlayButton( Rect canvas, SongDef song = null, float size = 24 )
+        {
+            if ( song == null || MusicManager.AudioSource.clip == song.clip )
+            {
+                if ( MusicManager.AudioSource.isPlaying && !MusicManager.isPaused )
+                {
+                    DrawButton( canvas, Pause, MusicManager.Pause, size );
+                }
+                else
+                {
+                    if ( MusicManager.isPaused )
+                    {
+                        DrawButton( canvas, Play, MusicManager.Resume, size );
+                    }
+                    else
+                    {
+                        DrawButton( canvas, Play, () => MusicManager.Play(), size );
+                    }
+                }
+            }
+            else
+            {
+                DrawButton( canvas, size > 24 ? PlayXL : Play, () => MusicManager.Play( song ), size );
+            }
+        }
+
         public static void DrawSeekBar( Rect canvas )
         {
             var progress = MusicManager.AudioSource.time / MusicManager.AudioSource.clip.length;
-            GUI.DrawTexture( canvas, Resources.SeekBackgroundTexture );
-            GUI.DrawTexture( canvas.LeftPart( progress ), Resources.SeekForegroundTexture );
+            GUI.DrawTexture( canvas, SeekBackgroundTexture );
+            GUI.DrawTexture( canvas.LeftPart( progress ), SeekForegroundTexture );
 
             Widgets.DrawHighlightIfMouseover( canvas );
             if ( Event.current.type != EventType.Repaint
@@ -105,14 +133,10 @@ namespace MusicManager
             {
                 var seekPct = Mathf.Clamp01( ( Event.current.mousePosition.x - canvas.xMin ) / canvas.width );
                 MusicManager.AudioSource.time = seekPct * MusicManager.AudioSource.clip.length;
-                MusicManager.AudioSource.Pause();
+                MusicManager.Seeking          = true;
 
                 // stop event bubbling up.
                 Event.current.Use();
-            }
-            else if ( !MusicManager.isPaused && !MusicManager.AudioSource.isPlaying )
-            {
-                MusicManager.AudioSource.UnPause();
             }
         }
 

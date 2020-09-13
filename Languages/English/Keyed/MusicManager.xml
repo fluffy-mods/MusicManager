@@ -40,4 +40,11 @@
     <Fluffy.MusicManager.AllowedTense>Allowed during: {0}</Fluffy.MusicManager.AllowedTense>
     <Fluffy.MusicManager.War>war</Fluffy.MusicManager.War>
     <Fluffy.MusicManager.Peace>peace</Fluffy.MusicManager.Peace>
+
+    <Fluffy.MusicManager.SongIntervalPeace>Time between songs (peace)</Fluffy.MusicManager.SongIntervalPeace>
+    <Fluffy.MusicManager.SongIntervalPeace.Tip>The interval between songs when there is no danger.</Fluffy.MusicManager.SongIntervalPeace.Tip>
+    <Fluffy.MusicManager.SongIntervalWar>Time between songs (war)</Fluffy.MusicManager.SongIntervalWar>
+    <Fluffy.MusicManager.SongIntervalWar.Tip>The interval between songs when there is danger.</Fluffy.MusicManager.SongIntervalWar.Tip>
+
+    <Fluffy.MusicManager.ResetCustomMetaData>Reset song data</Fluffy.MusicManager.ResetCustomMetaData>
 </LanguageData>

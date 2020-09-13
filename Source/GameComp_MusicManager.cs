@@ -10,6 +10,7 @@ using JetBrains.Annotations;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using static MusicManager.Resources;
 
 namespace MusicManager
 {
@@ -17,7 +18,7 @@ namespace MusicManager
     {
         public const int Margin        = 6;
         public const int RowHeight     = 24;
-        public const int SeekBarHeight = 5;
+        public const int SeekBarHeight = 6;
         public const int WidgetWidth   = 150;
 
 
@@ -88,7 +89,7 @@ namespace MusicManager
 
         public static Vector2 Screen => new Vector2( UI.screenWidth, UI.screenHeight );
 
-        public static Vector2 Size => new Vector2( WidgetWidth, RowHeight * 3 );
+        public static Vector2 Size => new Vector2( WidgetWidth, RowHeight * 2 + SeekBarHeight );
 
         private static bool Dragging
         {
@@ -134,9 +135,11 @@ namespace MusicManager
 
             if ( MusicManager.CurrentSong != null )
             {
+                Text.Anchor = TextAnchor.MiddleLeft;
                 Widgets.Label( row.WidthContractedBy( Margin ), MusicManager.CurrentSong.Name() );
-                row.y += RowHeight;
-                Utilities.DrawSeekBar( row.TopPartPixels( SeekBarHeight ) );
+                Text.Anchor =  TextAnchor.UpperLeft;
+                row.y       += RowHeight;
+                Utilities.DrawSeekBar( row.TopPartPixels( SeekBarHeight ).WidthContractedBy( Margin ) );
                 row.y += SeekBarHeight;
             }
 
@@ -144,38 +147,26 @@ namespace MusicManager
             if ( !MusicManager.Settings.Locked ) HandleDragging( canvas );
         }
 
-        private void DrawButton( Rect canvas, Texture2D icon, Action clickAction )
+        public override void GameComponentUpdate()
         {
-            var iconRect = new Rect( 0, 0, 24, 24 )
-                          .CenteredOnXIn( canvas )
-                          .CenteredOnYIn( canvas );
-            GUI.DrawTexture( iconRect, icon );
-            Widgets.DrawHighlightIfMouseover( canvas );
-            if ( Widgets.ButtonInvisible( canvas ) )
-                clickAction.Invoke();
+            base.GameComponentUpdate();
+            if ( MusicManager.Seeking && MusicManager.LastSeek > 0.1f )
+            {
+                MusicManager.Resume();
+                MusicManager.Seeking = false;
+            }
         }
 
         private void DrawButtons( Rect canvas )
         {
             var buttonRect = canvas.RightPart( 1 / 4f );
-            DrawButton( buttonRect, Resources.List, () => Find.WindowStack.Add( new Window_MusicManager() ) );
+            Utilities.DrawButton( buttonRect, List, () => Find.WindowStack.Add( new Window_MusicManager() ), 24 );
             buttonRect.x -= buttonRect.width;
-            DrawButton( buttonRect, Resources.Next, MusicManager.Next );
+            Utilities.DrawButton( buttonRect, Next, MusicManager.Next, 24 );
             buttonRect.x -= buttonRect.width;
-            if ( MusicManager.AudioSource.isPlaying && !MusicManager.isPaused )
-            {
-                DrawButton( buttonRect, Resources.Pause, MusicManager.Pause );
-            }
-            else
-            {
-                if ( MusicManager.isPaused )
-                    DrawButton( buttonRect, Resources.Play, MusicManager.Resume );
-                else
-                    DrawButton( buttonRect, Resources.Play, () => MusicManager.Play() );
-            }
-
+            Utilities.DrawPlayButton( buttonRect );
             buttonRect.x -= buttonRect.width;
-            DrawButton( buttonRect, Resources.Previous, MusicManager.Previous );
+            Utilities.DrawButton( buttonRect, Previous, MusicManager.Previous, 24 );
         }
     }
 }

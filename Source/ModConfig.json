@@ -3,16 +3,25 @@
     "version": {
         "major": 0,
         "minor": 1,
-        "build": 132
+        "build": 188
     },
     "git_user": "fluffy-mods",
     "git_repo": "MusicManager",
     "visibility": 0,
     "packageId": "fluffy.musicmanager",
-    "changenote": "",
-    "changenotes": [],
+    "changenote": "2020-08-11 21:08 :: Fluffy :: bunch of stuff",
+    "changenotes": [
+        {
+            "repo": "MusicManager",
+            "hash": "7d9ab2137f6912488516fb5133c150c3d6c493dd",
+            "date": "2020-08-11 21:08",
+            "author": "Fluffy",
+            "message": "bunch of stuff"
+        }
+    ],
     "contributors": {},
     "tags": [
-        "1.1"
+        "1.1",
+        "1.2"
     ]
 }

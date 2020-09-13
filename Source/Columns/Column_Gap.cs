@@ -17,11 +17,7 @@ namespace MusicManager
         {
             return 0;
         }
-
-        public override void DrawCell( Rect canvas, SongDef song )
-        {
-        }
-
+        
         public override void DrawHeader( Rect canvas, List<SongDef> songs )
         {
         }

@@ -3,6 +3,7 @@
 
 using System.Collections.Generic;
 using System.Text;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -18,10 +19,19 @@ namespace MusicManager
         public virtual  Vector2 IconSize { get; set; } = new Vector2( 20, 20 );
         public virtual  int     Width    { get; set; }
         public abstract int     Compare( SongDef a, SongDef b );
-        public abstract void    DrawCell( Rect canvas, SongDef song );
+
+        public virtual void DrawCell( Rect canvas, SongDef song )
+        {
+            GUI.color = Color( song );
+        }
         public abstract void    DrawHeader( Rect canvas, List<SongDef> songs );
         public abstract bool    Filter( SongDef song );
         public abstract bool Filtered { get; }
+
+        public virtual Color Color( SongDef song )
+        {
+            return UnityEngine.Color.white;
+        }
 
         public virtual void DrawOverlay( Rect canvas )
         {

@@ -22,6 +22,7 @@ namespace MusicManager
         public static List<SongTableColumn> Columns = new List<SongTableColumn>
         {
             new Column_Gap( _margin ),
+            new Column_PlayPause( ColWidth ),
             NameColumn,
             new Column_Length( TimeWidth ),
             new Column_Gap( _margin ),
@@ -45,7 +46,10 @@ namespace MusicManager
 
         public Window_MusicManager()
         {
-            Instance = this;
+            Instance              = this;
+            closeOnAccept         = true;
+            closeOnCancel         = true;
+            closeOnClickedOutside = true;
         }
 
         public static List<SongDef> FilteredSongs
@@ -122,20 +126,6 @@ namespace MusicManager
             DrawSongDetails( detailsRect, MusicManager.CurrentSong );
         }
 
-        public void DrawPlayButton( Rect canvas, SongDef song, float size )
-        {
-            if ( MusicManager.AudioSource.clip == song.clip )
-            {
-                if ( MusicManager.isPaused )
-                    Utilities.DrawButton( canvas, size > 24 ? PlayXL : Play, MusicManager.Resume, size );
-                else
-                    Utilities.DrawButton( canvas, size > 24 ? PauseXL : Pause, MusicManager.Pause, size );
-            }
-            else
-            {
-                Utilities.DrawButton( canvas, size > 24 ? PlayXL : Play, () => MusicManager.Play( song ), size );
-            }
-        }
 
         public void DrawSongDetails( Rect canvas, SongDef song )
         {
@@ -168,7 +158,7 @@ namespace MusicManager
 
                 Utilities.DrawButton( buttonsRect.LeftPartPixels( 24 ).VerticalMidPartPixels( 24 ), Previous,
                                       MusicManager.Previous );
-                DrawPlayButton( buttonsRect.HorizontalMidPartPixels( 48 ), song, 42 );
+                Utilities.DrawPlayButton( buttonsRect.HorizontalMidPartPixels( 48 ), song, 42 );
                 Utilities.DrawButton( buttonsRect.RightPartPixels( 24 ).VerticalMidPartPixels( 24 ), Next,
                                       MusicManager.Next );
                 Utilities.DrawSeekBar( seekRect );
@@ -201,9 +191,9 @@ namespace MusicManager
             cur = Vector2.zero;
             foreach ( var song in songs )
             {
+                var songRect = new Rect( cur.x, cur.y, contentRect.width, RowHeight );
                 if ( alternate )
-                    GUI.DrawTexture( new Rect( cur.x, cur.y, contentRect.width, RowHeight ),
-                                     SlightlyDarkBackgroundColor );
+                    GUI.DrawTexture( songRect, SlightlyDarkBackgroundColor );
                 alternate = !alternate;
                 foreach ( var column in Columns )
                 {
@@ -233,6 +223,12 @@ namespace MusicManager
                 Traverse.Create( dialog ).Field<Mod>( "selMod" ).Value = MusicManager.Instance;
                 Find.WindowStack.Add( dialog );
             }
+        }
+
+        public override void PreClose ()
+        {
+            base.PreClose();
+            MusicManager.SongDatabase.WriteMetaData();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿// MusicManager.cs
 // Copyright Karel Kroeze, 2020-2020
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -27,7 +28,10 @@ namespace MusicManager
         {
             // initialize settings
             Settings = GetSettings<Settings>();
+            ApplySongInterval();
             Instance = this;
+            SongDatabase = new SongDatabase();
+            LongEventHandler.ExecuteWhenFinished(SongDatabase.Initialize);
 
 #if DEBUG
             Harmony.DEBUG = true;
@@ -38,11 +42,19 @@ namespace MusicManager
 
         public static List<SongDef> AppropriateSongs => Songs.Where( AppropriateNow ).ToList();
 
+        public static SongDatabase SongDatabase;
+
         public static AudioSource AudioSource =>
             audioSource_FieldInfo.GetValue( Find.MusicManagerPlay ) as AudioSource;
 
-        public static SongDef CurrentSong =>
-            lastStartedSong_FieldInfo.GetValue( Find.MusicManagerPlay ) as SongDef;
+        public static SongDef CurrentSong
+        {
+            get
+            {
+                if ( !AudioSource.isPlaying && !isPaused ) return null;
+                return lastStartedSong_FieldInfo.GetValue( Find.MusicManagerPlay ) as SongDef;
+            }
+        }
 
         public static MusicManager Instance { get; private set; }
 
@@ -50,7 +62,30 @@ namespace MusicManager
 
         public static Settings Settings { get; private set; }
 
-        public static List<SongDef> Songs => DefDatabase<SongDef>.AllDefsListForReading;
+        public static List<SongDef> Songs   => DefDatabase<SongDef>.AllDefsListForReading;
+
+        private static bool _seeking;
+        public static bool Seeking
+        {
+            get => _seeking;
+            set
+            {
+                if ( value )
+                {
+                    Pause();
+                    LastSeek = Time.time;
+                }
+
+                _seeking = value;
+            }
+        }
+
+        private static float _lastSeek;
+        public static float LastSeek
+        {
+            get => Time.time - _lastSeek;
+            set => _lastSeek = value;
+        }
 
 
         public static bool AppropriateNow( SongDef song )
@@ -106,6 +141,28 @@ namespace MusicManager
         public override string SettingsCategory()
         {
             return I18n.MusicManager;
+        }
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            ApplySongInterval();
+        }
+
+        public void ApplySongInterval()
+        {
+            typeof( MusicManagerPlay ).GetField( "SongIntervalTension", BindingFlags.NonPublic | BindingFlags.Static )
+                                      .SetValue( null, Settings.SongIntervalWar );
+            typeof( MusicManagerPlay ).GetField( "SongIntervalRelax", BindingFlags.NonPublic | BindingFlags.Static )
+                                      .SetValue( null, Settings.SongIntervalPeace );
+
+            if ( Current.Root is Root_Play root )
+            {
+                typeof( MusicManagerPlay )
+                   .GetField( "nextSongStartTime", BindingFlags.Instance | BindingFlags.NonPublic ).SetValue( root.musicManagerPlay, 0 );
+            }
+
+            Log.Debug( "interval applied(?)");
         }
     }
 }
