@@ -8,18 +8,6 @@ Also included is a larger interface that lists all the songs available, and allo
 
 You can control the default interval between songs by moving the appropriate sliders in the mods' settings screen.
 
-# Compatibility with other mods
-
-Music Manager is fully compatible with other mods that add music to the game.
-
 # Coming Soon
 
-I've spend a couple of months slowly adding features to this mod, but it is by no means complete. Over the coming months, I plan to add (or at least think about adding) the following;
-
-- playlists
-- player songs (mp3, etc.)
-- spotify integration
-
-# Known Issues
-
-None, yet.
+Additional features
