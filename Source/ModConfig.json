@@ -2,42 +2,21 @@
     "name": "Music Manager",
     "version": {
         "major": 1,
-        "minor": 0,
-        "build": 190
+        "minor": 1,
+        "build": 193
     },
     "git_user": "fluffy-mods",
     "git_repo": "MusicManager",
     "visibility": 0,
     "packageId": "fluffy.musicmanager",
-    "changenote": "2020-09-15 00:09 :: Fluffy :: add description and preview\n2020-09-14 00:09 :: Fluffy :: add persistence for custom metadata\n2020-08-11 21:08 :: Fluffy :: bunch of stuff",
+    "changenote": "2020-09-15 00:09 :: Fluffy :: add manifest",
     "changenotes": [
         {
             "repo": "MusicManager",
-            "hash": "a5d2562265df66d187f19ebd6d6188e5f0da7fca",
+            "hash": "a67811371ed4cea901e4dffb02f58c448f8e7229",
             "date": "2020-09-15 00:09",
             "author": "Fluffy",
-            "message": "Release 0.1.189 [nolog]"
-        },
-        {
-            "repo": "MusicManager",
-            "hash": "1c8372dfe59b74f77c63ba3eb50345dd02b71ab3",
-            "date": "2020-09-15 00:09",
-            "author": "Fluffy",
-            "message": "add description and preview"
-        },
-        {
-            "repo": "MusicManager",
-            "hash": "a2c4ce5c40ce317099a06e795ea61ef2a0797698",
-            "date": "2020-09-14 00:09",
-            "author": "Fluffy",
-            "message": "add persistence for custom metadata"
-        },
-        {
-            "repo": "MusicManager",
-            "hash": "7d9ab2137f6912488516fb5133c150c3d6c493dd",
-            "date": "2020-08-11 21:08",
-            "author": "Fluffy",
-            "message": "bunch of stuff"
+            "message": "add manifest"
         }
     ],
     "contributors": {},
