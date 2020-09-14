@@ -2,23 +2,15 @@
     "name": "Music Manager",
     "version": {
         "major": 1,
-        "minor": 1,
-        "build": 193
+        "minor": 2,
+        "build": 196
     },
     "git_user": "fluffy-mods",
     "git_repo": "MusicManager",
     "visibility": 0,
     "packageId": "fluffy.musicmanager",
-    "changenote": "2020-09-15 00:09 :: Fluffy :: add manifest",
-    "changenotes": [
-        {
-            "repo": "MusicManager",
-            "hash": "a67811371ed4cea901e4dffb02f58c448f8e7229",
-            "date": "2020-09-15 00:09",
-            "author": "Fluffy",
-            "message": "add manifest"
-        }
-    ],
+    "changenote": "",
+    "changenotes": [],
     "contributors": {},
     "tags": [
         "1.1",
