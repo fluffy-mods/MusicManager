@@ -9,8 +9,15 @@
     "git_repo": "MusicManager",
     "visibility": 0,
     "packageId": "fluffy.musicmanager",
-    "changenote": "2020-09-14 00:09 :: Fluffy :: add persistence for custom metadata\n2020-08-11 21:08 :: Fluffy :: bunch of stuff",
+    "changenote": "2020-09-15 00:09 :: Fluffy :: add description and preview\n2020-09-14 00:09 :: Fluffy :: add persistence for custom metadata\n2020-08-11 21:08 :: Fluffy :: bunch of stuff",
     "changenotes": [
+        {
+            "repo": "MusicManager",
+            "hash": "1c8372dfe59b74f77c63ba3eb50345dd02b71ab3",
+            "date": "2020-09-15 00:09",
+            "author": "Fluffy",
+            "message": "add description and preview"
+        },
         {
             "repo": "MusicManager",
             "hash": "a2c4ce5c40ce317099a06e795ea61ef2a0797698",
