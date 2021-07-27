@@ -1,0 +1,24 @@
+{
+    "name": "Music Manager",
+    "sourceDir": ".",
+    "targetDir": "MusicManager",
+    "url": "https://github.com/fluffy-mods/MusicManager",
+    "version": {
+        "major": 2,
+        "minor": 0,
+        "build": 198
+    },
+    "author": {
+        "name": "Fluffy",
+        "url": "https://github.com/fluffy-mods/",
+        "email": "fluffy.l2032@gmail.com"
+    },
+    "git": {
+        "owner": "fluffy-mods",
+        "repo": "MusicManager",
+        "url": "https://github.com/fluffy-mods/MusicManager"
+    },
+    "changelog": [],
+    "contributions": [],
+    "contributors": {}
+}
