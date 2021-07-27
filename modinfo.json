@@ -5,7 +5,7 @@
     "url": "https://github.com/fluffy-mods/MusicManager",
     "version": {
         "major": 2,
-        "minor": 0,
+        "minor": 1,
         "build": 198
     },
     "author": {
@@ -18,7 +18,17 @@
         "repo": "MusicManager",
         "url": "https://github.com/fluffy-mods/MusicManager"
     },
-    "changelog": [],
+    "changelog": [
+        {
+            "date": "2021-07-27T21:18:23.000Z",
+            "message": "remove squiglies",
+            "author": {
+                "name": "Fluffy",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "e62b8330fa15c0b1bb9538dda6640d4a2a70c17c"
+        }
+    ],
     "contributions": [],
     "contributors": {}
 }
