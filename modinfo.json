@@ -20,6 +20,15 @@
     },
     "changelog": [
         {
+            "date": "2021-07-27T22:15:11.000Z",
+            "message": "add correct steam id",
+            "author": {
+                "name": "FluffierThanThou",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "a402ec10f60429e13368f7ee9d83f9c564d099fa"
+        },
+        {
             "date": "2021-07-27T21:18:23.000Z",
             "message": "remove squiglies",
             "author": {
