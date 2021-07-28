@@ -6,7 +6,7 @@
     "version": {
         "major": 2,
         "minor": 1,
-        "build": 198
+        "build": 200
     },
     "author": {
         "name": "Fluffy",
@@ -19,6 +19,15 @@
         "url": "https://github.com/fluffy-mods/MusicManager"
     },
     "changelog": [
+        {
+            "date": "2021-07-27T22:15:31.000Z",
+            "message": "release v2.1.198",
+            "author": {
+                "name": "FluffierThanThou",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "48e380b9dd5509046cb09cfd831e3e3a891efaca"
+        },
         {
             "date": "2021-07-27T22:15:11.000Z",
             "message": "add correct steam id",
