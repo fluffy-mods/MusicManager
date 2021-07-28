@@ -32,11 +32,9 @@ namespace MusicManager {
         }
 
         public override int Compare(SongDef a, SongDef b) {
-            if (a?.allowedSeasons == null && b?.allowedSeasons == null) {
-                return 0;
-            }
-
-            return (a?.allowedSeasons) == null
+            return a?.allowedSeasons == null && b?.allowedSeasons == null
+                ? 0
+                : (a?.allowedSeasons) == null
                 ? -1
                 : b?.allowedSeasons == null ? 1 : a.allowedSeasons.Sum(s => (int) s + 10) - b.allowedSeasons.Sum(s => (int) s + 10);
         }

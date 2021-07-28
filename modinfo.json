@@ -5,7 +5,7 @@
     "url": "https://github.com/fluffy-mods/MusicManager",
     "version": {
         "major": 2,
-        "minor": 2,
+        "minor": 3,
         "build": 224
     },
     "author": {
@@ -19,6 +19,15 @@
         "url": "https://github.com/fluffy-mods/MusicManager"
     },
     "changelog": [
+        {
+            "date": "2021-07-28T22:20:02.000Z",
+            "message": "disable mod in pre-game screens, code style stuff",
+            "author": {
+                "name": "FluffierThanThou",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "186159bc0761c24ac8c8fd16784e79b923ef2d20"
+        },
         {
             "date": "2021-07-28T08:53:17.000Z",
             "message": "add some checks and logging to audioSource getter",
