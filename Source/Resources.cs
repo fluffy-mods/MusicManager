@@ -1,14 +1,12 @@
-﻿// Resources.cs
+// Resources.cs
 // Copyright Karel Kroeze, 2020-2020
 
 using UnityEngine;
 using Verse;
 
-namespace MusicManager
-{
+namespace MusicManager {
     [StaticConstructorOnStartup]
-    public class Resources
-    {
+    public class Resources {
         public static Texture2D DarkBackgroundColor =
             SolidColorMaterials.NewSolidColorTexture( new Color( 0, 0, 0, .8f ) );
 

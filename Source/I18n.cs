@@ -6,10 +6,8 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace MusicManager
-{
-    public static class I18n
-    {
+namespace MusicManager {
+    public static class I18n {
         public static string LockWidgetPosition        = Translate( "LockWidgetPosition" );
         public static string LockWidgetPositionTooltip = Translate( "LockWidgetPosition.Tooltip" );
         public static string MusicManager              = "Fluffy.MusicManager".Translate();
@@ -30,40 +28,33 @@ namespace MusicManager
         public static string SongIntervalPeace_Tip     = Translate( "SongIntervalPeace.Tip" );
         public static string SongIntervalWar_Tip       = Translate( "SongIntervalWar.Tip" );
 
-        private static string Key( string key )
-        {
+        private static string Key(string key) {
             return $"Fluffy.MusicManager.{key}";
         }
 
-        private static string Translate( string key, params NamedArgument[] args )
-        {
-            return Key( key ).Translate( args ).Resolve();
+        private static string Translate(string key, params NamedArgument[] args) {
+            return Key(key).Translate(args).Resolve();
         }
 
-        public static string AllowedTimeOfDay( TimeOfDay tod )
-        {
-            return Translate( "AllowedTimeOfDay", TimeOfDay( tod ) );
+        public static string AllowedTimeOfDay(TimeOfDay tod) {
+            return Translate("AllowedTimeOfDay", TimeOfDay(tod));
         }
 
-        public static string TimeOfDay( TimeOfDay tod )
-        {
-            return Translate( $"TimeOfDay.{tod}" );
+        public static string TimeOfDay(TimeOfDay tod) {
+            return Translate($"TimeOfDay.{tod}");
         }
 
-        public static string AllowedSeasons( List<Season> seasons )
-        {
-            var _seasons = seasons.NullOrEmpty() ? Utilities.NewAllSeasonsList : seasons;
-            return Translate( "AllowedSeasons", _seasons.Select( Season ).ToCommaList( true ) );
+        public static string AllowedSeasons(List<Season> seasons) {
+            List<Season> _seasons = seasons.NullOrEmpty() ? Utilities.NewAllSeasonsList : seasons;
+            return Translate("AllowedSeasons", _seasons.Select(Season).ToCommaList(true));
         }
 
-        public static string Season( Season season )
-        {
-            return Translate( $"Season.{season}" );
+        public static string Season(Season season) {
+            return Translate($"Season.{season}");
         }
 
-        public static string AllowedTense( bool tense )
-        {
-            return Translate( "AllowedTense", tense ? War : Peace);
+        public static string AllowedTense(bool tense) {
+            return Translate("AllowedTense", tense ? War : Peace);
         }
 
         public static string War   = Translate( "War" );
