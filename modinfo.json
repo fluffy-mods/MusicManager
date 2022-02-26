@@ -6,7 +6,7 @@
     "version": {
         "major": 2,
         "minor": 3,
-        "build": 224
+        "build": 227
     },
     "author": {
         "name": "Fluffy",
@@ -66,5 +66,14 @@
         }
     ],
     "contributions": [],
-    "contributors": {}
+    "contributors": {},
+    "dependencies": [
+        {
+            "type": "required",
+            "id": "brrainz.harmony",
+            "name": "Harmony",
+            "steamId": 2009463077,
+            "download": "https://github.com/pardeike/HarmonyRimWorld/releases/latest"
+        }
+    ]
 }

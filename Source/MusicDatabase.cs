@@ -158,8 +158,8 @@ namespace MusicManager {
                 }
 
                 return time != original.time
-                    ? true
-                    : seasons?.Count != original.seasons?.Count || ((seasons != null || original.seasons != null) && (seasons.Except(original.seasons).Any() || original.seasons.Except(seasons).Any()));
+                 || seasons?.Count != original.seasons?.Count
+                 || ((seasons != null || original.seasons != null) && (seasons.Except(original.seasons).Any() || original.seasons.Except(seasons).Any()));
             }
         }
 
