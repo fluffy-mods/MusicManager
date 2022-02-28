@@ -6,7 +6,7 @@
     "version": {
         "major": 2,
         "minor": 3,
-        "build": 227
+        "build": 228
     },
     "author": {
         "name": "Fluffy",
@@ -19,6 +19,15 @@
         "url": "https://github.com/fluffy-mods/MusicManager"
     },
     "changelog": [
+        {
+            "date": "2022-02-26T16:15:03.000Z",
+            "message": "Update description",
+            "author": {
+                "name": "FluffierThanThou",
+                "email": "fluffy.l2032@gmail.com"
+            },
+            "hash": "775cc763adb278ff28327891a3ced5730566e346"
+        },
         {
             "date": "2021-07-28T22:20:02.000Z",
             "message": "disable mod in pre-game screens, code style stuff",
