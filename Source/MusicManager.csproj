@@ -3,14 +3,13 @@
     <TargetFramework>net472</TargetFramework>
     <AssemblyTitle>MusicManager</AssemblyTitle>
     <Product>MusicManager</Product>
-    <Copyright>Copyright © 2020-2021</Copyright>
+    <Copyright>Copyright © 2020-2022</Copyright>
     <OutputPath>..\Assemblies\</OutputPath>
-    <PostBuildEvent>mod update</PostBuildEvent>
     <DebugType>portable</DebugType>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3074" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.3517-beta" />
     <PackageReference Include="Lib.Harmony" Version="2.1.1" ExcludeAssets="runtime" />
   </ItemGroup>
 </Project>

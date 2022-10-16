@@ -202,9 +202,7 @@ namespace MusicManager {
 
             // options
             if (Widgets.ButtonImage(canvas.RightPartPixels(24).TopPartPixels(24), Cog)) {
-                Dialog_ModSettings dialog = new Dialog_ModSettings();
-                Traverse.Create(dialog).Field<Mod>("selMod").Value = MusicManager.Instance;
-                Find.WindowStack.Add(dialog);
+                Find.WindowStack.Add(new Dialog_ModSettings(MusicManager.Instance));
             }
         }
 
