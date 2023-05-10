@@ -21,6 +21,8 @@ namespace MusicManager {
         public static string TenseColumn_Tip           = Translate( "Columns.Tense.Tooltip" );
         public static string SeasonsColumn             = Translate( "Columns.Seasons.Label" );
         public static string SeasonsColumn_Tip         = Translate( "Columns.Seasons.Tooltip" );
+        public static string SongDisabledColumn         = Translate( "Columns.SongDisabled.Label" );
+        public static string SongDisabledColumn_Tip     = Translate( "Columns.SongDisabled.Tooltip" );
         public static string Filtered                  = Translate( "Filtered" );
         public static string Sorted                    = Translate( "Sorted" );
         public static string SongIntervalPeace         = Translate( "SongIntervalPeace" );
@@ -56,9 +58,15 @@ namespace MusicManager {
         public static string AllowedTense(bool tense) {
             return Translate("AllowedTense", tense ? War : Peace);
         }
-
         public static string War   = Translate( "War" );
         public static string Peace = Translate( "Peace" );
+
+        public static string SongDisabled(float commonality) {
+            return Translate("SongEnabledDisabled", commonality > 0 ? Enabled : Disabled);
+        }
+        public static string Enabled   = Translate( "Enabled" );
+        public static string Disabled = Translate( "Disabled" );
+
         public static string ResetCustomMetaData = Translate( "ResetCustomMetaData" );
     }
 }

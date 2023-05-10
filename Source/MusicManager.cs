@@ -17,7 +17,7 @@ namespace MusicManager {
         private static readonly AccessTools.FieldRef<MusicManagerPlay, SongDef> _lastStartedSongRef;
 
         static MusicManager() {
-            _appropriateNowMethodInfo = AccessTools.Method(typeof(MusicManager), "AppropriateNow");
+            _appropriateNowMethodInfo = AccessTools.Method(typeof(MusicManagerPlay), "AppropriateNow");
             _audioSourceRef = AccessTools.FieldRefAccess<AudioSource>(typeof(MusicManagerPlay), "audioSource");
             _lastStartedSongRef = AccessTools.FieldRefAccess<SongDef>(typeof(MusicManagerPlay), "lastStartedSong");
 
@@ -83,7 +83,8 @@ namespace MusicManager {
 
 
         public static bool AppropriateNow(SongDef song) {
-            return (bool) _appropriateNowMethodInfo.Invoke(Find.MusicManagerPlay, new object[] { song });
+            return song.commonality > 0
+                && (bool) _appropriateNowMethodInfo.Invoke(Find.MusicManagerPlay, new object[] { song });
         }
 
         public static void Next() {
@@ -99,6 +100,12 @@ namespace MusicManager {
 
         public static void Play([CanBeNull] SongDef song = null) {
             Log.Debug("play");
+
+            if (song == null && !Songs.Any(s => AppropriateNow(s))) {
+                Log.Debug("no appropriate songs to play");
+                return;
+            }
+
             Find.MusicManagerPlay.ForceStartSong(song, false);
             AudioSource.time = 0;
 

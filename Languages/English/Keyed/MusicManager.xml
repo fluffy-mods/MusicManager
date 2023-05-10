@@ -20,6 +20,9 @@
     <Fluffy.MusicManager.Columns.Seasons.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by the seasons this song is allowed to play.
 &lt;b&gt;Alt-click&lt;/b&gt; to filter visible songs by the seasons they are allowed to play.
 &lt;b&gt;Shift-click&lt;/b&gt; to mass assign allowed seasons for visible songs.</Fluffy.MusicManager.Columns.Seasons.Tooltip>
+    <Fluffy.MusicManager.Columns.SongDisabled.Label>Song Disabled</Fluffy.MusicManager.Columns.SongDisabled.Label>
+    <Fluffy.MusicManager.Columns.SongDisabled.Tooltip>&lt;b&gt;Click&lt;/b&gt; to sort by whether the song is universally disabled or not.
+&lt;b&gt;Shift-click&lt;/b&gt; to mass enable or disable visible songs.</Fluffy.MusicManager.Columns.SongDisabled.Tooltip>
     <Fluffy.MusicManager.Filtered>This column has an active filter.</Fluffy.MusicManager.Filtered>
     <Fluffy.MusicManager.Sorted>The table is sorted by this column.</Fluffy.MusicManager.Sorted>
 
@@ -36,7 +39,7 @@
     <Fluffy.MusicManager.Season.Spring>spring</Fluffy.MusicManager.Season.Spring>
     <Fluffy.MusicManager.Season.PermanentWinter>permanent winter</Fluffy.MusicManager.Season.PermanentWinter>
     <Fluffy.MusicManager.Season.PermanentSummer>permanent summer</Fluffy.MusicManager.Season.PermanentSummer>
-    
+
     <Fluffy.MusicManager.AllowedTense>Allowed during: {0}</Fluffy.MusicManager.AllowedTense>
     <Fluffy.MusicManager.War>war</Fluffy.MusicManager.War>
     <Fluffy.MusicManager.Peace>peace</Fluffy.MusicManager.Peace>
@@ -45,6 +48,10 @@
     <Fluffy.MusicManager.SongIntervalPeace.Tip>The interval between songs when there is no danger.</Fluffy.MusicManager.SongIntervalPeace.Tip>
     <Fluffy.MusicManager.SongIntervalWar>Time between songs (war)</Fluffy.MusicManager.SongIntervalWar>
     <Fluffy.MusicManager.SongIntervalWar.Tip>The interval between songs when there is danger.</Fluffy.MusicManager.SongIntervalWar.Tip>
+
+    <Fluffy.MusicManager.SongEnabledDisabled>Song {0}</Fluffy.MusicManager.SongEnabledDisabled>
+    <Fluffy.MusicManager.Enabled>enabled</Fluffy.MusicManager.Enabled>
+    <Fluffy.MusicManager.Disabled>disabled</Fluffy.MusicManager.Disabled>
 
     <Fluffy.MusicManager.ResetCustomMetaData>Reset song data</Fluffy.MusicManager.ResetCustomMetaData>
 </LanguageData>

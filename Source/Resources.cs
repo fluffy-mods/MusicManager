@@ -40,6 +40,8 @@ namespace MusicManager {
                                 Dove      = ContentFinder<Texture2D>.Get( "UI/Icons/dove" ),
                                 Day       = ContentFinder<Texture2D>.Get( "UI/Icons/day" ),
                                 Night     = ContentFinder<Texture2D>.Get( "UI/Icons/night" ),
+                                Enabled     = ContentFinder<Texture2D>.Get( "UI/Icons/enabled" ),
+                                Disabled     = ContentFinder<Texture2D>.Get( "UI/Icons/disabled" ),
                                 ArrowDown = ContentFinder<Texture2D>.Get( "UI/Icons/arrow-down" ),
                                 ArrowUp   = ContentFinder<Texture2D>.Get( "UI/Icons/arrow-up" ),
                                 Funnel    = ContentFinder<Texture2D>.Get( "UI/Icons/funnel" ),
