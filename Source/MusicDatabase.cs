@@ -103,7 +103,7 @@ namespace MusicManager {
 
     public static class SongDef_Extensions {
         public static bool Enabled(this SongDef song) {
-            return !MusicManager.SongDatabase[song].disabled;
+            return MusicManager.SongDatabase[song].commonality > 0;
         }
     }
 
@@ -112,7 +112,7 @@ namespace MusicManager {
         public List<Season>    seasons;
         public bool      tense;
         public TimeOfDay time;
-        public bool      disabled;
+        public float      commonality;
 
         private SongMetaData original;
 
@@ -129,7 +129,8 @@ namespace MusicManager {
             original = new SongMetaData {
                 seasons = song.allowedSeasons == null ? null : new List<Season>(song.allowedSeasons),
                 time = song.allowedTimeOfDay,
-                tense = song.tense
+                tense = song.tense,
+                commonality = song.commonality
             };
         }
 
@@ -137,19 +138,20 @@ namespace MusicManager {
             song.allowedSeasons = seasons == null ? null : new List<Season>(seasons);
             song.allowedTimeOfDay = time;
             song.tense = tense;
+            song.commonality = commonality;
         }
 
         public void ApplyOriginalMetaData() {
             song.allowedSeasons = original.seasons == null ? null : new List<Season>(original.seasons);
             song.allowedTimeOfDay = original.time;
             song.tense = original.tense;
-            disabled = false;
+            song.commonality = 1;
         }
 
         public bool HasCustomMetaData {
             get {
                 GetCurrentMetaData();
-                if (disabled) {
+                if (commonality != original.commonality) {
                     return true;
                 }
 
@@ -167,6 +169,7 @@ namespace MusicManager {
             seasons = song.allowedSeasons == null ? null : new List<Season>(song.allowedSeasons);
             time = song.allowedTimeOfDay;
             tense = song.tense;
+            commonality = song.commonality;
         }
 
         public void ExposeData() {
@@ -178,7 +181,7 @@ namespace MusicManager {
             Scribe_Collections.Look(ref seasons, "Seasons");
             Scribe_Values.Look(ref tense, "Tense");
             Scribe_Values.Look(ref time, "TimeOfDay");
-            Scribe_Values.Look(ref disabled, "Disabled");
+            Scribe_Values.Look(ref commonality, "Commonality");
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit) {
                 NoteOriginal(song);

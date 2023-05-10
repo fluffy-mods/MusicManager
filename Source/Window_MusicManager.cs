@@ -29,6 +29,8 @@ namespace MusicManager {
             new Column_TimeOfDay( ColWidth ),
             new Column_Gap( _margin ),
             new Column_Seasons( ColWidth * 4 ),
+            new Column_Gap( _margin ),
+            new Column_SongDisabled( ColWidth ),
             new Column_Gap( _margin )
         };
 
